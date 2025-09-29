@@ -16,8 +16,25 @@
         }
 
         h1 {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #ffffff;
+        }
+
+        p {
+            max-width: 800px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            background-color: #3a3a3a;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        code {
+            background-color: #505050;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
         }
 
         table {
@@ -50,6 +67,16 @@
 </head>
 <body>
     <h1>Spell Cheat Sheet</h1>
+    
+    <p>
+        Using NCT is simple, treat it like a bit different ERT notes. How to actually use it?<br><br>
+        This how, for example: <code>10 Psu rwoff</code><br><br>
+        Let's break it down. <br>
+        <strong>10</strong> - a timer, type in how many seconds after combat starts you want your timer to 'pop'.<br>
+        <strong>Psu</strong> - Pain Suppression, NCT uses 3-letter codes to recognize spells, you can put max two spells into each timer.<br>
+        <strong>rwoff</strong> - a toggle, put ALWAYS at the end of a timer. 'off' means there will be no BW/DBM style text warning in the middle of the screen, 'on' means the opposite.
+    </p>
+
     <table>
         <tr>
             <th>Shortcut</th>
@@ -65,8 +92,6 @@
         <tr><td>Pur</td><td>Purify</td></tr>
         <tr><td>Hal</td><td>Halo</td></tr>
         <tr><td>Sdf</td><td>Shadowfiend</td></tr>
-        <tr><td>Fir</td><td>Fireball</td></tr>
-        <tr><td>Ice</td><td>Ice Lance</td></tr>
     </table>
 </body>
 </html>
