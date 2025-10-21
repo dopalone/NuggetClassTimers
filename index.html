@@ -9,9 +9,6 @@
             background-color: #2e2e2e;
             color: #f0f0f0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
             padding: 40px;
         }
 
@@ -20,14 +17,15 @@
         }
 
         h2 {
-            margin-top: 40px;
-            margin-bottom: 15px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            text-align: center;
         }
 
         p {
-            max-width: 800px;
+            max-width: 1200px;
             line-height: 1.6;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             background-color: #3a3a3a;
             padding: 20px;
             border-radius: 8px;
@@ -43,17 +41,16 @@
 
         table {
             border-collapse: collapse;
-            width: 80%;
-            max-width: 800px;
+            width: 100%;
             background-color: #3a3a3a;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         th, td {
-            padding: 12px 20px;
+            padding: 10px 15px;
             text-align: left;
         }
 
@@ -68,11 +65,24 @@
         tr:hover {
             background-color: #505050;
         }
+
+        /* Side-by-side layout */
+        .classes-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            justify-content: center;
+        }
+
+        .class-block {
+            flex: 1 1 340px;
+            max-width: 340px;
+        }
     </style>
 </head>
 <body>
     <h1>Spell Cheat Sheet</h1>
-     
+
     <p>
         Using DopaReminders is simple, treat it like a bit different ERT notes. How to actually use it?<br><br>
         Example: <code>10 Psu Pwb 5 rwoff</code><br><br>
@@ -85,108 +95,122 @@
         <strong>rwoff</strong> - toggle for BW/DBM style text warnings ('on' shows warning, 'off' hides it).
     </p>
 
-    <!-- Priest Spells -->
-    <h2>Priest</h2>
-    <table>
-        <tr><th>Shortcut</th><th>Spell</th></tr>
-        <tr><td>Pow</td><td>Power Infusion</td></tr>
-        <tr><td>Eva</td><td>Evangelism</td></tr>
-        <tr><td>Psu</td><td>Pain Suppression</td></tr>
-        <tr><td>Pwb</td><td>Power Word: Barrier</td></tr>
-        <tr><td>Pws</td><td>Power Word: Shield</td></tr>
-        <tr><td>Mds</td><td>Mass Dispel</td></tr>
-        <tr><td>Pur</td><td>Purify</td></tr>
-        <tr><td>Hal</td><td>Halo</td></tr>
-        <tr><td>Sdf</td><td>Shadowfiend</td></tr>
-        <tr><td>Rad</td><td>Power Word: Radiance</td></tr>
-        <tr><td>Rap</td><td>Rapture</td></tr>
-        <tr><td>Dhy</td><td>Divine Hymn</td></tr>
-        <tr><td>Dsp</td><td>Desperate Prayer</td></tr>
-        <tr><td>Gsp</td><td>Guardian Spirit</td></tr>
-        <tr><td>Hws</td><td>Holy Word: Sanctify</td></tr>
-        <tr><td>Hsw</td><td>Holy Word: Serenity</td></tr>
-        <tr><td>Pom</td><td>Prayer of Mending</td></tr>
-        <tr><td>Apo</td><td>Apotheosis</td></tr>
-        <tr><td>Soh</td><td>Symbol of Hope</td></tr>
-        <tr><td>Coh</td><td>Circle of Healing</td></tr>
-        <tr><td>Shi</td><td>Shining Force</td></tr>
-    </table>
+    <div class="classes-container">
 
-    <!-- Shaman Spells -->
-    <h2>Shaman</h2>
-    <table>
-        <tr><th>Shortcut</th><th>Spell</th></tr>
-        <tr><td>Ash</td><td>Astral Shift</td></tr>
-        <tr><td>Blo</td><td>Bloodlust</td></tr>
-        <tr><td>Pug</td><td>Purge</td></tr>
-        <tr><td>Hra</td><td>Healing Rain</td></tr>
-        <tr><td>Hst</td><td>Healing Stream Totem</td></tr>
-        <tr><td>Slt</td><td>Spirit Link Totem</td></tr>
-        <tr><td>Swg</td><td>Spiritwalker's Grace</td></tr>
-        <tr><td>Unl</td><td>Unleash Life</td></tr>
-        <tr><td>Wrt</td><td>Wind Rush Totem</td></tr>
-        <tr><td>Ang</td><td>Ancestral Guidance</td></tr>
-        <tr><td>Asn</td><td>Ascendance</td></tr>
-        <tr><td>Wsp</td><td>Wellspring</td></tr>
-        <tr><td>Cbt</td><td>Cloudburst Totem</td></tr>
-        <tr><td>Apt</td><td>Ancestral Protection Totem</td></tr>
-        <tr><td>Est</td><td>Earthen Shield Totem</td></tr>
-        <tr><td>Lst</td><td>Lightning Surge Totem</td></tr>
-    </table>
+        <!-- Priest -->
+        <div class="class-block">
+            <h2>Priest</h2>
+            <table>
+                <tr><th>Shortcut</th><th>Spell</th></tr>
+                <tr><td>Pow</td><td>Power Infusion</td></tr>
+                <tr><td>Eva</td><td>Evangelism</td></tr>
+                <tr><td>Psu</td><td>Pain Suppression</td></tr>
+                <tr><td>Pwb</td><td>Power Word: Barrier</td></tr>
+                <tr><td>Pws</td><td>Power Word: Shield</td></tr>
+                <tr><td>Mds</td><td>Mass Dispel</td></tr>
+                <tr><td>Pur</td><td>Purify</td></tr>
+                <tr><td>Hal</td><td>Halo</td></tr>
+                <tr><td>Sdf</td><td>Shadowfiend</td></tr>
+                <tr><td>Rad</td><td>Power Word: Radiance</td></tr>
+                <tr><td>Rap</td><td>Rapture</td></tr>
+                <tr><td>Dhy</td><td>Divine Hymn</td></tr>
+                <tr><td>Dsp</td><td>Desperate Prayer</td></tr>
+                <tr><td>Gsp</td><td>Guardian Spirit</td></tr>
+                <tr><td>Hws</td><td>Holy Word: Sanctify</td></tr>
+                <tr><td>Hsw</td><td>Holy Word: Serenity</td></tr>
+                <tr><td>Pom</td><td>Prayer of Mending</td></tr>
+                <tr><td>Apo</td><td>Apotheosis</td></tr>
+                <tr><td>Soh</td><td>Symbol of Hope</td></tr>
+                <tr><td>Coh</td><td>Circle of Healing</td></tr>
+                <tr><td>Shi</td><td>Shining Force</td></tr>
+            </table>
+        </div>
 
-    <!-- Monk Spells -->
-    <h2>Monk</h2>
-    <table>
-        <tr><th>Shortcut</th><th>Spell</th></tr>
-        <tr><td>Esf</td><td>Essence Font</td></tr>
-        <tr><td>Frb</td><td>Fortifying Brew</td></tr>
-        <tr><td>Rnm</td><td>Renewing Mist</td></tr>
-        <tr><td>Tft</td><td>Thunder Focus Tea</td></tr>
-        <tr><td>Evm</td><td>Enveloping Mist</td></tr>
-        <tr><td>Civ</td><td>Chi Wave</td></tr>
-        <tr><td>Cbi</td><td>Chi Burst</td></tr>
-        <tr><td>Zep</td><td>Zen Pulse</td></tr>
-        <tr><td>Rop</td><td>Ring of Peace</td></tr>
-        <tr><td>Dim</td><td>Diffuse Magic</td></tr>
-        <tr><td>Dah</td><td>Dampen Harm</td></tr>
-        <tr><td>Red</td><td>Invoke Chi-Ji</td></tr>
-        <tr><td>Sjs</td><td>Jade Serpent Statue</td></tr>
-        <tr><td>Mnt</td><td>Mana Tea</td></tr>
-        <tr><td>Coc</td><td>Cocoon</td></tr>
-    </table>
+        <!-- Shaman -->
+        <div class="class-block">
+            <h2>Shaman</h2>
+            <table>
+                <tr><th>Shortcut</th><th>Spell</th></tr>
+                <tr><td>Ash</td><td>Astral Shift</td></tr>
+                <tr><td>Blo</td><td>Bloodlust</td></tr>
+                <tr><td>Pug</td><td>Purge</td></tr>
+                <tr><td>Hra</td><td>Healing Rain</td></tr>
+                <tr><td>Hst</td><td>Healing Stream Totem</td></tr>
+                <tr><td>Slt</td><td>Spirit Link Totem</td></tr>
+                <tr><td>Swg</td><td>Spiritwalker's Grace</td></tr>
+                <tr><td>Unl</td><td>Unleash Life</td></tr>
+                <tr><td>Wrt</td><td>Wind Rush Totem</td></tr>
+                <tr><td>Ang</td><td>Ancestral Guidance</td></tr>
+                <tr><td>Asn</td><td>Ascendance</td></tr>
+                <tr><td>Wsp</td><td>Wellspring</td></tr>
+                <tr><td>Cbt</td><td>Cloudburst Totem</td></tr>
+                <tr><td>Apt</td><td>Ancestral Protection Totem</td></tr>
+                <tr><td>Est</td><td>Earthen Shield Totem</td></tr>
+                <tr><td>Lst</td><td>Lightning Surge Totem</td></tr>
+            </table>
+        </div>
 
-    <!-- Druid Spells -->
-    <h2>Druid</h2>
-    <table>
-        <tr><th>Shortcut</th><th>Spell</th></tr>
-        <tr><td>Bar</td><td>Barkskin</td></tr>
-        <tr><td>Inn</td><td>Innervate</td></tr>
-        <tr><td>Ibr</td><td>Ironbark</td></tr>
-        <tr><td>Swm</td><td>Swiftmend</td></tr>
-        <tr><td>Tra</td><td>Tranquility</td></tr>
-        <tr><td>Wig</td><td>Wild Growth</td></tr>
-        <tr><td>Cew</td><td>Cenarion Ward</td></tr>
-        <tr><td>Ren</td><td>Renewal</td></tr>
-        <tr><td>Tre</td><td>Tree of Life</td></tr>
-        <tr><td>Flo</td><td>Efflorescence</td></tr>
-    </table>
+        <!-- Monk -->
+        <div class="class-block">
+            <h2>Monk</h2>
+            <table>
+                <tr><th>Shortcut</th><th>Spell</th></tr>
+                <tr><td>Esf</td><td>Essence Font</td></tr>
+                <tr><td>Frb</td><td>Fortifying Brew</td></tr>
+                <tr><td>Rnm</td><td>Renewing Mist</td></tr>
+                <tr><td>Tft</td><td>Thunder Focus Tea</td></tr>
+                <tr><td>Evm</td><td>Enveloping Mist</td></tr>
+                <tr><td>Civ</td><td>Chi Wave</td></tr>
+                <tr><td>Cbi</td><td>Chi Burst</td></tr>
+                <tr><td>Zep</td><td>Zen Pulse</td></tr>
+                <tr><td>Rop</td><td>Ring of Peace</td></tr>
+                <tr><td>Dim</td><td>Diffuse Magic</td></tr>
+                <tr><td>Dah</td><td>Dampen Harm</td></tr>
+                <tr><td>Red</td><td>Invoke Chi-Ji</td></tr>
+                <tr><td>Sjs</td><td>Jade Serpent Statue</td></tr>
+                <tr><td>Mnt</td><td>Mana Tea</td></tr>
+                <tr><td>Coc</td><td>Cocoon</td></tr>
+            </table>
+        </div>
 
-    <!-- Paladin Spells -->
-    <h2>Paladin</h2>
-    <table>
-        <tr><th>Shortcut</th><th>Spell</th></tr>
-        <tr><td>Aur</td><td>Aura Mastery</td></tr>
-        <tr><td>Bop</td><td>Blessing of Protection</td></tr>
-        <tr><td>Sac</td><td>Divine Sacrifice</td></tr>
-        <tr><td>Dpr</td><td>Divine Protection</td></tr>
-        <tr><td>Bub</td><td>Bubble</td></tr>
-        <tr><td>Lod</td><td>Light of Dawn</td></tr>
-        <tr><td>Loh</td><td>Lay on Hands</td></tr>
-        <tr><td>Lih</td><td>Light's Hammer</td></tr>
-        <tr><td>Hoa</td><td>Holy Avenger</td></tr>
-        <tr><td>Hor</td><td>Holy Prism</td></tr>
-        <tr><td>Bof</td><td>Beacon of Faith</td></tr>
-        <tr><td>Bov</td><td>Beacon of Virtue</td></tr>
-    </table>
+        <!-- Druid -->
+        <div class="class-block">
+            <h2>Druid</h2>
+            <table>
+                <tr><th>Shortcut</th><th>Spell</th></tr>
+                <tr><td>Bar</td><td>Barkskin</td></tr>
+                <tr><td>Inn</td><td>Innervate</td></tr>
+                <tr><td>Ibr</td><td>Ironbark</td></tr>
+                <tr><td>Swm</td><td>Swiftmend</td></tr>
+                <tr><td>Tra</td><td>Tranquility</td></tr>
+                <tr><td>Wig</td><td>Wild Growth</td></tr>
+                <tr><td>Cew</td><td>Cenarion Ward</td></tr>
+                <tr><td>Ren</td><td>Renewal</td></tr>
+                <tr><td>Tre</td><td>Tree of Life</td></tr>
+                <tr><td>Flo</td><td>Efflorescence</td></tr>
+            </table>
+        </div>
+
+        <!-- Paladin -->
+        <div class="class-block">
+            <h2>Paladin</h2>
+            <table>
+                <tr><th>Shortcut</th><th>Spell</th></tr>
+                <tr><td>Aur</td><td>Aura Mastery</td></tr>
+                <tr><td>Bop</td><td>Blessing of Protection</td></tr>
+                <tr><td>Sac</td><td>Divine Sacrifice</td></tr>
+                <tr><td>Dpr</td><td>Divine Protection</td></tr>
+                <tr><td>Bub</td><td>Bubble</td></tr>
+                <tr><td>Lod</td><td>Light of Dawn</td></tr>
+                <tr><td>Loh</td><td>Lay on Hands</td></tr>
+                <tr><td>Lih</td><td>Light's Hammer</td></tr>
+                <tr><td>Hoa</td><td>Holy Avenger</td></tr>
+                <tr><td>Hor</td><td>Holy Prism</td></tr>
+                <tr><td>Bof</td><td>Beacon of Faith</td></tr>
+                <tr><td>Bov</td><td>Beacon of Virtue</td></tr>
+            </table>
+        </div>
+
+    </div>
 </body>
 </html>
